@@ -17,4 +17,8 @@ class Event < ApplicationRecord
   def free?
     price.blank? || price.zero?
   end
+
+  def sold_out?
+    (capacity - registrations.size).zero?
+  end
 end
