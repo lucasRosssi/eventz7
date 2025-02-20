@@ -1,4 +1,12 @@
 module EventsHelper
+  def main_image(event)
+    if event.main_image.attached?  
+      image_tag event.main_image
+    else
+      image_tag "placeholder.png"
+    end
+  end
+
   def price(event)
     if event.free?
       "Free"

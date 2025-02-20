@@ -65,7 +65,7 @@ class EventsController < ApplicationController
         :price,
         :starts_at,
         :capacity,
-        :image_file_name,
+        :main_image,
         category_ids: []
       )
     end
